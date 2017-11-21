@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Counter 2</string>
+    <string name="winner">winner!</string>
+    <string name="loser">smoked!</string>
+    <string name="empty">""</string>
+    <string name="tie">Tie!</string>
+    <string name="endRound">End Round</string>
+    <string name="vs">vs.</string>
+    <string name="roundsWon">Rounds won:</string>
+    <string name="rules">Best out of 5. \n3 rounds take the win</string>
+    <string name="judges">Judges</string>
+</resources>

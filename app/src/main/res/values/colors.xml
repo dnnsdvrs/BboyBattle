@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="blueMain">#1565C0</color>
+    <color name="redMain">#C62828</color>
+    <color name="white">#FFFFFF</color>
+    <color name="judges">#9E9E9E</color>
+</resources>

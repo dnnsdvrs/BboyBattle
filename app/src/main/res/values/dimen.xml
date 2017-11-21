@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <dimen name="judge_button_margin">16dp</dimen>
+    <dimen name="judge_button_padding_top">4dp</dimen>
+    <dimen name="judge_button_padding_bottom">4dp</dimen>
+
+</resources>
