@@ -132,15 +132,15 @@ public class MainActivity extends AppCompatActivity {
         super.onRestoreInstanceState(saveInstanceState);
 
         if (saveInstanceState != null) {
-            judgeOneScore = saveInstanceState.getInt("judgeOneScoreS");
-            judgeTwoScore = saveInstanceState.getInt("judgeTwoScoreS");
-            judgeThreeScore = saveInstanceState.getInt("judgeThreeScoreS");
-            roundEnd = saveInstanceState.getInt("roundEndS");
-            roundsWonLeft = saveInstanceState.getInt("roundsWonLeftS");
-            roundsWonRight = saveInstanceState.getInt("roundsWonRightS");
+            if (saveInstanceState != null) {
+                judgeOneScore = saveInstanceState.getInt("judgeOneScoreS");
+                judgeTwoScore = saveInstanceState.getInt("judgeTwoScoreS");
+                judgeThreeScore = saveInstanceState.getInt("judgeThreeScoreS");
+                roundsWonLeft = saveInstanceState.getInt("roundsWonLeftS");
+                roundsWonRight = saveInstanceState.getInt("roundsWonRightS");
+                endScore(roundEnd);
             }
-        TextView scoreViewLeft = (TextView) findViewById(R.id.textResultLeft);
-        TextView scoreViewRight = (TextView) findViewById(R.id.textResultRight);
+
         TextView roundViewLeft = (TextView) findViewById(R.id.textNumberLeft);
         TextView roundViewRight = (TextView) findViewById(R.id.textNumberRight);
         roundViewLeft.setText(String.valueOf(roundsWonLeft));
@@ -180,4 +180,4 @@ public class MainActivity extends AppCompatActivity {
      */
 
 
-}
+}}
