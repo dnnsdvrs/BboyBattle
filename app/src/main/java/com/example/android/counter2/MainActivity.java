@@ -1,5 +1,6 @@
 package com.example.android.counter2;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -7,10 +8,11 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    //Variables used to score and display the scores of judges and rounds.
+    //Global variables used to score and display the scores of judges and rounds.
 
     int judgeOneScore;
     int judgeTwoScore;
@@ -25,30 +27,36 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    // Judges scores, which sets the variables to either -1 or 1, depending on which side is pressed
+    // Judges scores, which sets the variables to either -1 or 1, depending on which side is pressed. Also displays a short Toast message for visual feedback
 
     public void judgeOneLeft(View v) {
         judgeOneScore = -1;
+        Toast.makeText(MainActivity.this,"Judge 1 has spoken",Toast.LENGTH_SHORT).show();
     }
 
     public void judgeOneRight(View v) {
         judgeOneScore = 1;
+        Toast.makeText(MainActivity.this,"Judge 1 has spoken",Toast.LENGTH_SHORT).show();
     }
 
     public void judgeTwoLeft(View v) {
         judgeTwoScore = -1;
+        Toast.makeText(MainActivity.this,"Judge 2 has spoken",Toast.LENGTH_SHORT).show();
     }
 
     public void judgeTwoRight(View v) {
         judgeTwoScore = 1;
+        Toast.makeText(MainActivity.this,"Judge 2 has spoken",Toast.LENGTH_SHORT).show();
     }
 
     public void judgeThreeLeft(View v) {
         judgeThreeScore = -1;
+        Toast.makeText(MainActivity.this,"Judge 3 has spoken",Toast.LENGTH_SHORT).show();
     }
 
     public void judgeThreeRight(View v) {
         judgeThreeScore = 1;
+        Toast.makeText(MainActivity.this,"Judge 3 has spoken",Toast.LENGTH_SHORT).show();
     }
 
     //End of the round: after all judges scored, add all scores and determine roundwinner.
