@@ -64,12 +64,12 @@ public class MainActivity extends AppCompatActivity {
     public void displayRoundScore(int roundEnd) {
         if (roundEnd < 0) {
             roundsWonLeft = roundsWonLeft + 1;
-            TextView roundViewLeft = (TextView) findViewById(R.id.textRoundsWonLeft);
+            TextView roundViewLeft = (TextView) findViewById(R.id.textNumberLeft);
             roundViewLeft.setText(String.valueOf(roundsWonLeft));
 
         } else if (roundEnd > 0) {
             roundsWonRight = roundsWonRight + 1;
-            TextView roundViewRight = (TextView) findViewById(R.id.textRoundsWonRight);
+            TextView roundViewRight = (TextView) findViewById(R.id.textNumberRight);
             roundViewRight.setText(String.valueOf(roundsWonRight));
 
         }
@@ -102,13 +102,50 @@ public class MainActivity extends AppCompatActivity {
         roundsWonLeft = 0;
         TextView scoreViewLeft = (TextView) findViewById(R.id.textResultLeft);
         TextView scoreViewRight = (TextView) findViewById(R.id.textResultRight);
-        TextView roundViewLeft = (TextView) findViewById(R.id.textRoundsWonLeft);
+        TextView roundViewLeft = (TextView) findViewById(R.id.textNumberLeft);
+        TextView roundViewRight = (TextView) findViewById(R.id.textNumberRight);
         roundViewLeft.setText(String.valueOf(roundsWonLeft));
-        TextView roundViewRight = (TextView) findViewById(R.id.textRoundsWonRight);
         roundViewRight.setText(String.valueOf(roundsWonRight));
         scoreViewLeft.setText(R.string.empty);
         scoreViewRight.setText(R.string.empty);
     }
+
+    //Save the state of the variables and text after the screen orientation changes.
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+
+        savedInstanceState.putInt("judgeOneScoreS", judgeOneScore);
+        savedInstanceState.putInt("judgeTwoScoreS", judgeTwoScore);
+        savedInstanceState.putInt("judgeThreeScoreS", judgeThreeScore);
+        savedInstanceState.putInt("roundEndS", roundEnd);
+        savedInstanceState.putInt("roundsWonLeftS", roundsWonLeft);
+        savedInstanceState.putInt("roundsWonRightS", roundsWonRight);
+        super.onSaveInstanceState(savedInstanceState);
+
+
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle saveInstanceState) {
+        super.onRestoreInstanceState(saveInstanceState);
+
+        if (saveInstanceState != null) {
+            judgeOneScore = saveInstanceState.getInt("judgeOneScoreS");
+            judgeTwoScore = saveInstanceState.getInt("judgeTwoScoreS");
+            judgeThreeScore = saveInstanceState.getInt("judgeThreeScoreS");
+            roundEnd = saveInstanceState.getInt("roundEndS");
+            roundsWonLeft = saveInstanceState.getInt("roundsWonLeftS");
+            roundsWonRight = saveInstanceState.getInt("roundsWonRightS");
+            }
+        TextView scoreViewLeft = (TextView) findViewById(R.id.textResultLeft);
+        TextView scoreViewRight = (TextView) findViewById(R.id.textResultRight);
+        TextView roundViewLeft = (TextView) findViewById(R.id.textNumberLeft);
+        TextView roundViewRight = (TextView) findViewById(R.id.textNumberRight);
+        roundViewLeft.setText(String.valueOf(roundsWonLeft));
+        roundViewRight.setText(String.valueOf(roundsWonRight));
+        }
 
 
     //End Battle button is pressed. A text of 'winner' and 'loser' is displayed, depending on who won most rounds. This is automated now, after someone wins three rounds.

@@ -7,7 +7,7 @@
     android:background="@color/colorPrimaryDark"
     android:orientation="horizontal"
     tools:context="com.example.android.counter2.MainActivity"
-    android:paddingTop="16dp">
+    >
 
     <LinearLayout
         android:layout_width="0dp"
@@ -47,6 +47,7 @@
             android:textSize="32sp" />
 
         <TextView
+            android:id="@+id/textRoundsWonLeft"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -55,11 +56,12 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/textRoundsWonLeft"
+            android:id="@+id/textNumberLeft"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="0"
+            android:layout_marginTop="-16dp"
             android:textColor="@color/redMain"
             android:textSize="80sp"
             android:textStyle="bold" />
@@ -78,7 +80,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="32dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="8dp"
             android:fontFamily="@font/whoa"
             android:gravity="center"
             android:text="@string/vs"
@@ -303,6 +305,7 @@
             android:textSize="32sp" />
 
         <TextView
+            android:id="@+id/textRoundsWonRight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -311,10 +314,11 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/textRoundsWonRight"
+            android:id="@+id/textNumberRight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="-16dp"
             android:text="0"
             android:textColor="@color/blueMain"
             android:textSize="80sp"
