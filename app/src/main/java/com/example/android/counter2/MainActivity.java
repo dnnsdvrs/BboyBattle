@@ -31,32 +31,32 @@ public class MainActivity extends AppCompatActivity {
 
     public void judgeOneLeft(View v) {
         judgeOneScore = -1;
-        Toast.makeText(MainActivity.this,"Judge 1 has spoken",Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this,"Judge 1 chose Lefty",Toast.LENGTH_SHORT).show();
     }
 
     public void judgeOneRight(View v) {
         judgeOneScore = 1;
-        Toast.makeText(MainActivity.this,"Judge 1 has spoken",Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this,"Judge 1 chose R-Side",Toast.LENGTH_SHORT).show();
     }
 
     public void judgeTwoLeft(View v) {
         judgeTwoScore = -1;
-        Toast.makeText(MainActivity.this,"Judge 2 has spoken",Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this,"Judge 2 chose Lefty",Toast.LENGTH_SHORT).show();
     }
 
     public void judgeTwoRight(View v) {
         judgeTwoScore = 1;
-        Toast.makeText(MainActivity.this,"Judge 2 has spoken",Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this,"Judge 2 chose R-Side",Toast.LENGTH_SHORT).show();
     }
 
     public void judgeThreeLeft(View v) {
         judgeThreeScore = -1;
-        Toast.makeText(MainActivity.this,"Judge 3 has spoken",Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this,"Judge 3 chose Lefty",Toast.LENGTH_SHORT).show();
     }
 
     public void judgeThreeRight(View v) {
         judgeThreeScore = 1;
-        Toast.makeText(MainActivity.this,"Judge 3 has spoken",Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this,"Judge 3 chose R-side",Toast.LENGTH_SHORT).show();
     }
 
     //End of the round: after all judges scored, add all scores and determine roundwinner.
