@@ -131,7 +131,6 @@ public class MainActivity extends AppCompatActivity {
     public void onRestoreInstanceState(Bundle saveInstanceState) {
         super.onRestoreInstanceState(saveInstanceState);
 
-        if (saveInstanceState != null) {
             if (saveInstanceState != null) {
                 judgeOneScore = saveInstanceState.getInt("judgeOneScoreS");
                 judgeTwoScore = saveInstanceState.getInt("judgeTwoScoreS");
@@ -180,4 +179,4 @@ public class MainActivity extends AppCompatActivity {
      */
 
 
-}}
+}
