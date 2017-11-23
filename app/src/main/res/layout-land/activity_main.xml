@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="horizontal"
+    tools:context="com.example.android.counter2.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/lefty_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/bboylefty"
+            android:layout_alignParentLeft="true"
+            android:scaleType="centerCrop"
+            android:alpha="0.6"/>
+
+        <TextView
+            android:id="@+id/lefty_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:paddingHorizontal="16dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/rounded_corners_red"
+            android:layout_alignParentTop="true"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:text="Bboy Lefty"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+
+
+        <TextView
+            android:id="@+id/textResultLeft"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-24dp"
+            android:fontFamily="@font/whoa"
+            android:text=""
+            android:gravity="center"
+            android:textColor="@color/redMain"
+            android:textSize="32sp"
+            android:layout_above="@id/textNumberLeft"/>
+
+        <TextView
+            android:id="@+id/textRoundsWonLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/roundsWon"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_below="@id/textNumberLeft"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/textNumberLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="0"
+            android:textColor="@color/redMain"
+            android:textSize="80sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"            />
+
+        <Button
+            android:id="@+id/endRoundButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners_rect"
+            android:onClick="endRoundButton"
+            android:text="@string/endRound"
+            android:paddingHorizontal="16dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="16dp"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/vsBig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/whoa"
+            android:layout_marginTop="-24dp"
+            android:gravity="center"
+            android:text="@string/vs"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="85sp" />
+
+        <TextView
+            android:id="@+id/judgesText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vsBig"
+            android:gravity="center"
+            android:text="@string/judges"
+            android:textColor="@color/judges"
+            android:textSize="16sp"
+            android:textStyle="bold"
+
+            />
+
+
+
+        <LinearLayout
+            android:id="@+id/judgeOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/judgesText"
+            android:layout_marginBottom="@dimen/judge_button_margin"
+            android:layout_marginTop="@dimen/judge_button_margin">
+
+            <ImageButton
+                android:id="@+id/judgeOneLeftButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corners_rect"
+                android:gravity="center"
+                android:onClick="judgeOneLeft"
+                android:paddingBottom="@dimen/judge_button_padding_bottom"
+                android:paddingTop="@dimen/judge_button_padding_top"
+                android:src="@drawable/ic_triangle_red" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/judgeOneRightButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corners_rect"
+                android:gravity="center"
+                android:onClick="judgeOneRight"
+                android:paddingBottom="@dimen/judge_button_padding_bottom"
+                android:paddingTop="@dimen/judge_button_padding_top"
+                android:src="@drawable/ic_triangle_blue" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/judgeTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/judgeOne"
+            android:layout_marginBottom="@dimen/judge_button_margin"
+            android:layout_marginTop="@dimen/judge_button_margin">
+
+            <ImageButton
+                android:id="@+id/judgeTwoLeftButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corners_rect"
+                android:gravity="center"
+                android:onClick="judgeTwoLeft"
+                android:paddingBottom="@dimen/judge_button_padding_bottom"
+                android:paddingTop="@dimen/judge_button_padding_top"
+                android:src="@drawable/ic_triangle_red" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/judgeTwoRightButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corners_rect"
+                android:gravity="center"
+                android:onClick="judgeTwoRight"
+                android:paddingBottom="@dimen/judge_button_padding_bottom"
+                android:paddingTop="@dimen/judge_button_padding_top"
+                android:src="@drawable/ic_triangle_blue" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/judgeThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/judgeTwo"
+            android:layout_marginBottom="@dimen/judge_button_margin"
+            android:layout_marginTop="@dimen/judge_button_margin">
+
+            <ImageButton
+                android:id="@+id/judgeThreeLeftButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corners_rect"
+                android:gravity="center"
+                android:onClick="judgeThreeLeft"
+                android:paddingBottom="@dimen/judge_button_padding_bottom"
+                android:paddingTop="@dimen/judge_button_padding_top"
+                android:src="@drawable/ic_triangle_red" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/judgeThreeRightButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corners_rect"
+                android:gravity="center"
+                android:onClick="judgeThreeRight"
+                android:paddingBottom="@dimen/judge_button_padding_bottom"
+                android:paddingTop="@dimen/judge_button_padding_top"
+                android:src="@drawable/ic_triangle_blue" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/judgeThree"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:text="@string/rules"
+            android:textColor="@color/judges" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/bgirlrside"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerCrop"
+            android:alpha="0.6"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_corners_blue"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_alignParentTop="true"
+            android:paddingHorizontal="16dp"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:text="Bgirl R-Side"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/textResultRight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-24dp"
+            android:fontFamily="@font/whoa"
+            android:text=""
+            android:gravity="center"
+            android:textColor="@color/blueMain"
+            android:textSize="32sp"
+            android:layout_above="@id/textNumberRight"/>
+
+        <TextView
+            android:id="@+id/textRoundsWonRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/roundsWon"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/textNumberRight"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textNumberRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="0"
+            android:layout_centerInParent="true"
+            android:textColor="@color/blueMain"
+            android:textSize="80sp"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/newBattleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="16dp"
+            android:paddingHorizontal="16dp"
+            android:background="@drawable/rounded_corners_next"
+            android:onClick="newBattle"
+            android:text="New Battle"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+</LinearLayout>
